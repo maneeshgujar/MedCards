@@ -1,0 +1,339 @@
+{
+  "med_use": [
+    {
+      "medicine_name": "Paracetamol",
+      "Usage": "Fever, pain relief"
+    },
+    {
+      "medicine_name": "Ibuprofen",
+      "Usage": "Pain, inflammation"
+    },
+    {
+      "medicine_name": "Aspirin",
+      "Usage": "Pain, blood thinning"
+    },
+    {
+      "medicine_name": "Diclofenac",
+      "Usage": "Strong pain relief"
+    },
+    {
+      "medicine_name": "Aceclofenac",
+      "Usage": "Joint pain"
+    },
+    {
+      "medicine_name": "Cetirizine",
+      "Usage": "Allergy"
+    },
+    {
+      "medicine_name": "Levocetirizine",
+      "Usage": "Cold, sneezing"
+    },
+    {
+      "medicine_name": "Fexofenadine",
+      "Usage": "Allergy"
+    },
+    {
+      "medicine_name": "Ambroxol",
+      "Usage": "Wet cough"
+    },
+    {
+      "medicine_name": "Dextromethorphan",
+      "Usage": "Dry cough"
+    },
+    {
+      "medicine_name": "Phenylephrine",
+      "Usage": "Nasal congestion"
+    },
+    {
+      "medicine_name": "Chlorpheniramine",
+      "Usage": "Cold"
+    },
+    {
+      "medicine_name": "Amoxicillin",
+      "Usage": "Infection"
+    },
+    {
+      "medicine_name": "Azithromycin",
+      "Usage": "Bacterial infection"
+    },
+    {
+      "medicine_name": "Ciprofloxacin",
+      "Usage": "UTI infection"
+    },
+    {
+      "medicine_name": "Doxycycline",
+      "Usage": "Skin infection"
+    },
+    {
+      "medicine_name": "Cefixime",
+      "Usage": "Broad infection"
+    },
+    {
+      "medicine_name": "Pantoprazole",
+      "Usage": "Acidity"
+    },
+    {
+      "medicine_name": "Omeprazole",
+      "Usage": "Acid reflux"
+    },
+    {
+      "medicine_name": "Rabeprazole",
+      "Usage": "GERD"
+    },
+    {
+      "medicine_name": "Domperidone",
+      "Usage": "Vomiting"
+    },
+    {
+      "medicine_name": "Ondansetron",
+      "Usage": "Nausea"
+    },
+    {
+      "medicine_name": "ORS",
+      "Usage": "Dehydration"
+    },
+    {
+      "medicine_name": "Lactulose",
+      "Usage": "Constipation"
+    },
+    {
+      "medicine_name": "Bisacodyl",
+      "Usage": "Constipation"
+    },
+    {
+      "medicine_name": "Metformin",
+      "Usage": "Diabetes"
+    },
+    {
+      "medicine_name": "Glimepiride",
+      "Usage": "Blood sugar"
+    },
+    {
+      "medicine_name": "Insulin",
+      "Usage": "Diabetes"
+    },
+    {
+      "medicine_name": "Amlodipine",
+      "Usage": "BP control"
+    },
+    {
+      "medicine_name": "Telmisartan",
+      "Usage": "BP control"
+    },
+    {
+      "medicine_name": "Losartan",
+      "Usage": "Hypertension"
+    },
+    {
+      "medicine_name": "Atorvastatin",
+      "Usage": "Cholesterol"
+    },
+    {
+      "medicine_name": "Rosuvastatin",
+      "Usage": "Cholesterol"
+    },
+    {
+      "medicine_name": "Clopidogrel",
+      "Usage": "Blood thinning"
+    },
+    {
+      "medicine_name": "Warfarin",
+      "Usage": "Blood thinner"
+    },
+    {
+      "medicine_name": "Hydroxychloroquine",
+      "Usage": "Autoimmune"
+    },
+    {
+      "medicine_name": "Prednisolone",
+      "Usage": "Inflammation"
+    },
+    {
+      "medicine_name": "Betamethasone",
+      "Usage": "Allergy, skin"
+    },
+    {
+      "medicine_name": "Salbutamol",
+      "Usage": "Asthma"
+    },
+    {
+      "medicine_name": "Budesonide",
+      "Usage": "Asthma"
+    },
+    {
+      "medicine_name": "Montelukast",
+      "Usage": "Allergy, asthma"
+    },
+    {
+      "medicine_name": "Vitamin D3",
+      "Usage": "Bone health"
+    },
+    {
+      "medicine_name": "Vitamin B12",
+      "Usage": "Nerve health"
+    },
+    {
+      "medicine_name": "Iron tablets",
+      "Usage": "Anemia"
+    },
+    {
+      "medicine_name": "Calcium tablets",
+      "Usage": "Bones"
+    },
+    {
+      "medicine_name": "Zinc",
+      "Usage": "Immunity"
+    },
+    {
+      "medicine_name": "Multivitamins",
+      "Usage": "General health"
+    },
+    {
+      "medicine_name": "Fluconazole",
+      "Usage": "Fungal infection"
+    },
+    {
+      "medicine_name": "Clotrimazole",
+      "Usage": "Skin fungal"
+    },
+    {
+      "medicine_name": "Acyclovir",
+      "Usage": "Viral infection"
+    }
+  ],
+  "med_category": [
+    {
+      "category": "Pain Relief & Fever Management",
+      "medicines": [
+        "Dolo 650 (Paracetamol)",
+        "Calpol (Paracetamol)",
+        "Combiflam (Ibuprofen + Paracetamol)",
+        "Brufen (Ibuprofen)",
+        "Zerodol (Aceclofenac)",
+        "Nise (Nimesulide)",
+        "Voveran (Diclofenac)",
+        "Flexon (Ibuprofen + Paracetamol)",
+        "Saridon (Paracetamol + Propyphenazone + Caffeine)",
+        "Meftal Spas (Mefenamic Acid + Dicyclomine)"
+      ]
+    },
+    {
+      "category": "Antibiotics & Antimicrobials",
+      "medicines": [
+        "Augmentin (Amoxicillin + Clavulanic Acid)",
+        "Azithral (Azithromycin)",
+        "Ciplox (Ciprofloxacin)",
+        "Taxim-O (Cefixime)",
+        "Moxikind-CV (Amoxicillin + Clavulanic Acid)",
+        "Levoflox (Levofloxacin)",
+        "Zifi (Cefixime)",
+        "Oflox (Ofloxacin)",
+        "Lupifix (Cefixime)",
+        "Monocef (Ceftriaxone)"
+      ]
+    },
+    {
+      "category": "Antidiabetic Medications",
+      "medicines": [
+        "Glycomet GP (Metformin + Glimepiride)",
+        "Janumet (Sitagliptin + Metformin)",
+        "Galvus Met (Vildagliptin + Metformin)",
+        "Jardiance (Empagliflozin)",
+        "Forxiga (Dapagliflozin)",
+        "Trajenta (Linagliptin)",
+        "Amaryl (Glimepiride)",
+        "Zoryl (Glimepiride)",
+        "Obimet (Metformin)",
+        "Victoza (Liraglutide)"
+      ]
+    },
+    {
+      "category": "Cardiovascular Medications",
+      "medicines": [
+        "Atorva (Atorvastatin)",
+        "Rosuvas (Rosuvastatin)",
+        "Ecosprin (Aspirin)",
+        "Clopilet (Clopidogrel)",
+        "Telma (Telmisartan)",
+        "Amlodac (Amlodipine)",
+        "Olmezest (Olmesartan)",
+        "Nebicard (Nebivolol)",
+        "Ramipres (Ramipril)",
+        "Metolar (Metoprolol)"
+      ]
+    },
+    {
+      "category": "Gastrointestinal Medications",
+      "medicines": [
+        "Pantocid (Pantoprazole)",
+        "Omez (Omeprazole)",
+        "Razo (Rabeprazole)",
+        "Aciloc (Ranitidine)",
+        "Domstal (Domperidone)",
+        "Itopride (Ganaton)",
+        "Lanzol (Lansoprazole)",
+        "Zinetac (Ranitidine)",
+        "Normaxin (Chlordiazepoxide + Clidinium)",
+        "Spasmoproxyvon (Dicyclomine + Paracetamol)"
+      ]
+    },
+    {
+      "category": "Respiratory Medications",
+      "medicines": [
+        "Foracort (Formoterol + Budesonide)",
+        "Seroflo (Salmeterol + Fluticasone)",
+        "Asthalin (Salbutamol)",
+        "Levolin (Levosalbutamol)",
+        "Duolin (Ipratropium + Salbutamol)",
+        "Montair (Montelukast)",
+        "Allegra (Fexofenadine)",
+        "Cetirizine (Cetzine)",
+        "Levocetirizine (Xyzal)",
+        "Budenase AQ (Budesonide nasal spray)"
+      ]
+    },
+    {
+      "category": "Neurological & Psychiatric Medications",
+      "medicines": [
+        "Stemetil (Prochlorperazine)",
+        "Vertin (Betahistine)",
+        "Lonazep (Clonazepam)",
+        "Zolfresh (Zolpidem)",
+        "Sizodon (Risperidone)",
+        "Depakote (Divalproex)",
+        "Lamitor (Lamotrigine)",
+        "Gabapin (Gabapentin)",
+        "Pregaba (Pregabalin)",
+        "Amitone (Amitriptyline)"
+      ]
+    },
+    {
+      "category": "Dermatological & Allergy Medications",
+      "medicines": [
+        "Betnovate (Betamethasone)",
+        "Candid B (Clotrimazole + Beclomethasone)",
+        "Tenovate (Clobetasol)",
+        "Fucidin (Fusidic Acid)",
+        "Soframycin (Framycetin)",
+        "T-Bact (Mupirocin)",
+        "Elocon (Mometasone)",
+        "Lulifin (Luliconazole)",
+        "Permite (Permethrin)",
+        "Tacroz (Tacrolimus)"
+      ]
+    },
+    {
+      "category": "Vitamins & Supplements",
+      "medicines": [
+        "Shelcal (Calcium + Vitamin D3)",
+        "Neurobion Forte (B-complex vitamins)",
+        "A to Z (Multivitamin)",
+        "Revital H (Multivitamin + Ginseng)",
+        "Livogen (Iron + Folic Acid)",
+        "Calcimax (Calcium supplement)",
+        "Supradyn (Multivitamin)",
+        "Zincovit (Multivitamin)"
+      ]
+    }
+  ]
+}

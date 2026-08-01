@@ -1,0 +1,98 @@
+Build a simple single-page web application called "MedCards".
+
+Purpose:
+A medicine learning flashcard web app for students and medicine learners.
+
+Tech Stack:
+
+* Use React + Vite for frontend
+* Use Tailwind CSS for styling
+* Use local JSON data instead of database for MVP
+* Keep the app lightweight and deployable on Replit free tier
+* Fully responsive and mobile friendly
+
+Core Features:
+
+1. start page
+would have two dropdown
+- topic selector -> options -> medicine usage and medicine Category
+- theme selector -> option -> flash cards and test
+
+based on the theme selected in start page, flashcard or test page would be called acordingly
+and based on the topic selected med_use or med_category data in the json file would be used
+
+2. flashcard page
+- consists of a card that would perform a flip animation on click, the front of the card would display the medicine name and the back of the card would display the usage or category depending upon the topic selected
+- only 30 cards should be picked randomly from the json data according to the topic selected and current flip card / total no of cards should be displayed at the bottom center of the screen
+- it would have a back button at the top left that would go back to the start page
+- forward and backward button to go the next and previous flip cards
+- there would be a play button that would flip the card and move to the next card, where one side of the card being displayed for atleast 5 sec
+- backward button would be disabled for the first flipcard and on click of the forward button of the last flipcard the end page would be displayed
+
+3. Test page
+- would contain 30 randomly picked questions(medicine name) json data according to the topic selected
+- it would have a back button at the top left that would go back to the start page
+- four options should be displyed, in which one option should be correct and palced randomly in the options, three other would also be the options randonly generated from the data json, the options would be either usage or category based on the topic selected in the start page
+- user can only proceed further if correct option is selected, if the user clicks on the wrong option (incrroct option message would be displaed and user should be allowed to select the option again), and only when the correct option is clickedm the next button would be enabled
+
+4. end page
+- would display the message based on from which page the end page was called
+- if end page was called from flask card page the end page would display:
+message: Great! you have complete all the flash cards
+button: take a test -> that would lead to the test page (the same random generated questions should be passed on the test page, it should be shuffled)
+button: go to home -> directing to start page
+
+- if end page was called from test page then end page would display:
+message: 
+"results:
+Failed attmepts
+Successful attempts
+success rate"
+button: retake test -> that would lead to the test page (the same random generated questions should be passed on the test page, it should be shuffled)
+button: go to home -> directing to start page
+
+
+UI Design:
+
+* Modern clean medical style
+* Smooth flip animation
+* Mobile-first responsive layout
+* Minimal and fast UI
+* dark mode theme background
+
+Data:
+Use a local JSON file named:
+data.json
+
+JSON structure:
+{
+  "med_use": [
+    {
+      "medicine_name": "Paracetamol",
+      "Usage": "Fever, pain relief"
+    },...
+  ],
+   "med_category": [
+    {
+      "category": "Pain Relief & Fever Management",
+      "medicines": [
+        "Dolo 650 (Paracetamol)",
+        "Calpol (Paracetamol)",
+        "Combiflam (Ibuprofen + Paracetamol)",
+        "Brufen (Ibuprofen)"
+      ]
+    }, ...
+   ]
+}
+  
+attached the data.json file and the screenshot of the UI designa and flow
+
+Important:
+
+* Optimize for Replit free tier deployment
+* Keep architecture simple
+* No authentication
+* No backend required
+* No database required
+* Keep code beginner friendly and clean
+* Make sure app works smoothly on mobile devices
