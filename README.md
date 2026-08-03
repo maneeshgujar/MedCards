@@ -25,6 +25,7 @@ flashcards and quick tests — all in a clean, mobile-friendly dark-themed UI.
 ## 🛠️ Tech Stack
 
 - [React](https://react.dev) + [Vite](https://vitejs.dev)
+- [TypeScript](https://www.typescriptlang.org) — strict mode, full type safety
 - [Tailwind CSS](https://tailwindcss.com)
 - Local JSON data (`data.json`) — no backend or database required
 
@@ -34,17 +35,20 @@ flashcards and quick tests — all in a clean, mobile-friendly dark-themed UI.
 .
 ├── index.html
 ├── data.json                 # Medicine usage & category data
-├── vite.config.js
+├── vite.config.ts
+├── tsconfig.json             # Strict TypeScript config
 ├── src/
-│   ├── main.jsx
-│   ├── App.jsx               # Page routing & session state
-│   ├── data.js               # Data helpers (shuffle, pick cards, build tests)
+│   ├── main.tsx
+│   ├── App.tsx               # Page routing & session state
+│   ├── types.ts              # Shared domain types (Card, TestQuestion, …)
+│   ├── data.ts               # Data helpers (shuffle, pick cards, build tests)
+│   ├── vite-env.d.ts         # Vite client types
 │   ├── index.css             # Tailwind + flip animation helpers
 │   └── components/
-│       ├── StartPage.jsx
-│       ├── FlashcardPage.jsx
-│       ├── TestPage.jsx
-│       └── EndPage.jsx
+│       ├── StartPage.tsx
+│       ├── FlashcardPage.tsx
+│       ├── TestPage.tsx
+│       └── EndPage.tsx
 ```
 
 ## 🚀 Getting Started
@@ -76,6 +80,12 @@ npm run build
 npm run preview
 ```
 
+### Type checking
+
+```bash
+npm run typecheck
+```
+
 ## 🌐 Live Demo
 
 Deployed with GitHub Pages:
@@ -85,3 +95,8 @@ Deployed with GitHub Pages:
 ## 📄 License
 
 This project is for educational purposes. Not intended as medical advice.
+
+## 🔀 Branches
+
+- `main` — current version, written in **TypeScript**
+- `js-version` — archived **JavaScript** version of the app
