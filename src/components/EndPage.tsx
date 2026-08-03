@@ -1,10 +1,20 @@
+import type { EndSource, TestResults } from "../types";
+
+interface EndPageProps {
+  source: EndSource | null;
+  results: TestResults | null;
+  onTakeTest: () => void;
+  onRetakeTest: () => void;
+  onHome: () => void;
+}
+
 export default function EndPage({
   source,
   results,
   onTakeTest,
   onRetakeTest,
   onHome,
-}) {
+}: EndPageProps) {
   const fromFlashcards = source === "flashcards";
 
   return (
@@ -40,26 +50,28 @@ export default function EndPage({
             <h1 className="text-3xl font-bold text-white tracking-tight">
               Results
             </h1>
-            <div className="mt-6 bg-slate-900/70 border border-slate-800 rounded-2xl p-6 shadow-2xl space-y-4 text-left">
-              <div className="flex items-center justify-between">
-                <span className="text-slate-400">Failed attempts</span>
-                <span className="text-lg font-semibold text-rose-400 tabular-nums">
-                  {results.failed}
-                </span>
+            {results && (
+              <div className="mt-6 bg-slate-900/70 border border-slate-800 rounded-2xl p-6 shadow-2xl space-y-4 text-left">
+                <div className="flex items-center justify-between">
+                  <span className="text-slate-400">Failed attempts</span>
+                  <span className="text-lg font-semibold text-rose-400 tabular-nums">
+                    {results.failed}
+                  </span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-slate-400">Successful attempts</span>
+                  <span className="text-lg font-semibold text-emerald-400 tabular-nums">
+                    {results.successful}
+                  </span>
+                </div>
+                <div className="border-t border-slate-800 pt-4 flex items-center justify-between">
+                  <span className="text-slate-400">Success rate</span>
+                  <span className="text-2xl font-bold text-white tabular-nums">
+                    {results.rate}%
+                  </span>
+                </div>
               </div>
-              <div className="flex items-center justify-between">
-                <span className="text-slate-400">Successful attempts</span>
-                <span className="text-lg font-semibold text-emerald-400 tabular-nums">
-                  {results.successful}
-                </span>
-              </div>
-              <div className="border-t border-slate-800 pt-4 flex items-center justify-between">
-                <span className="text-slate-400">Success rate</span>
-                <span className="text-2xl font-bold text-white tabular-nums">
-                  {results.rate}%
-                </span>
-              </div>
-            </div>
+            )}
           </>
         )}
 

@@ -1,16 +1,19 @@
 import rawData from "../data.json";
+import type { Card, MedData, TestQuestion, Theme, Topic } from "./types";
 
-export const TOPICS = {
+const data = rawData as MedData;
+
+export const TOPICS: Record<Topic, string> = {
   med_use: "Medicine Usage",
   med_category: "Medicine Category",
 };
 
-export const THEMES = {
+export const THEMES: Record<Theme, string> = {
   flashcards: "Flash Cards",
   test: "Test",
 };
 
-export function shuffle(arr) {
+export function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -19,38 +22,38 @@ export function shuffle(arr) {
   return a;
 }
 
-function pickRandom(arr, n) {
+function pickRandom<T>(arr: T[], n: number): T[] {
   return shuffle(arr).slice(0, Math.min(n, arr.length));
 }
 
-function distinctAnswers(topic) {
+function distinctAnswers(topic: Topic): string[] {
   if (topic === "med_use") {
-    return [...new Set(rawData.med_use.map((m) => m.Usage))];
+    return [...new Set(data.med_use.map((m) => m.Usage))];
   }
-  return rawData.med_category.map((c) => c.category);
+  return data.med_category.map((c) => c.category);
 }
 
 // Build a pool of { question: medicine, answer: usage/category }
-export function buildCardPool(topic) {
+export function buildCardPool(topic: Topic): Card[] {
   if (topic === "med_use") {
-    return rawData.med_use.map((m) => ({
+    return data.med_use.map((m) => ({
       question: m.medicine_name,
       answer: m.Usage,
     }));
   }
-  return rawData.med_category.flatMap((c) =>
+  return data.med_category.flatMap((c) =>
     c.medicines.map((m) => ({ question: m, answer: c.category }))
   );
 }
 
 // Pick 30 random cards for a session
-export function pickSessionCards(topic) {
+export function pickSessionCards(topic: Topic): Card[] {
   return pickRandom(buildCardPool(topic), 30);
 }
 
 // Build test questions from a set of session cards (shuffled).
 // Each question gets 3 distinct wrong options + the correct one, shuffled.
-export function buildTestQuestions(topic, cards) {
+export function buildTestQuestions(topic: Topic, cards: Card[]): TestQuestion[] {
   const answers = distinctAnswers(topic);
   return shuffle(cards).map((card) => {
     const wrong = pickRandom(

@@ -4,16 +4,25 @@ import FlashcardPage from "./components/FlashcardPage";
 import TestPage from "./components/TestPage";
 import EndPage from "./components/EndPage";
 import { pickSessionCards, buildTestQuestions } from "./data";
+import type {
+  Card,
+  EndSource,
+  Page,
+  TestQuestion,
+  TestResults,
+  Theme,
+  Topic,
+} from "./types";
 
 export default function App() {
-  const [page, setPage] = useState("start");
-  const [topic, setTopic] = useState("med_use");
-  const [cards, setCards] = useState([]);
-  const [testQuestions, setTestQuestions] = useState([]);
-  const [endSource, setEndSource] = useState(null);
-  const [results, setResults] = useState(null);
+  const [page, setPage] = useState<Page>("start");
+  const [topic, setTopic] = useState<Topic>("med_use");
+  const [cards, setCards] = useState<Card[]>([]);
+  const [testQuestions, setTestQuestions] = useState<TestQuestion[]>([]);
+  const [endSource, setEndSource] = useState<EndSource | null>(null);
+  const [results, setResults] = useState<TestResults | null>(null);
 
-  const startSession = (selectedTopic, theme) => {
+  const startSession = (selectedTopic: Topic, theme: Theme) => {
     setTopic(selectedTopic);
     const sessionCards = pickSessionCards(selectedTopic);
     setCards(sessionCards);
@@ -39,7 +48,7 @@ export default function App() {
     setPage("end");
   };
 
-  const finishTest = (testResults) => {
+  const finishTest = (testResults: TestResults) => {
     setResults(testResults);
     setEndSource("test");
     setPage("end");

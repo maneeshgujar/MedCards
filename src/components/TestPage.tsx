@@ -1,15 +1,31 @@
 import { useState } from "react";
+import type { TestQuestion, TestResults } from "../types";
 
-export default function TestPage({ questions, onBack, onFinish }) {
+interface TestPageProps {
+  questions: TestQuestion[];
+  onBack: () => void;
+  onFinish: (results: TestResults) => void;
+}
+
+interface TestStats {
+  successful: number;
+  failed: number;
+}
+
+export default function TestPage({
+  questions,
+  onBack,
+  onFinish,
+}: TestPageProps) {
   const [index, setIndex] = useState(0);
   const [locked, setLocked] = useState(false);
-  const [wrongPicked, setWrongPicked] = useState(null);
-  const [stats, setStats] = useState({ successful: 0, failed: 0 });
+  const [wrongPicked, setWrongPicked] = useState<string | null>(null);
+  const [stats, setStats] = useState<TestStats>({ successful: 0, failed: 0 });
 
   const total = questions.length;
   const question = questions[index];
 
-  const handleOption = (option) => {
+  const handleOption = (option: string) => {
     if (locked) return;
 
     if (option === question.correct) {
@@ -40,7 +56,7 @@ export default function TestPage({ questions, onBack, onFinish }) {
     setWrongPicked(null);
   };
 
-  const optionClass = (option) => {
+  const optionClass = (option: string): string => {
     let base =
       "w-full text-left rounded-xl border px-4 py-3.5 text-base font-medium transition active:scale-[0.98] ";
 

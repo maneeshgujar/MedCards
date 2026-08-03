@@ -1,9 +1,14 @@
 import { useState } from "react";
 import { TOPICS, THEMES } from "../data";
+import type { Theme, Topic } from "../types";
 
-export default function StartPage({ onStart }) {
-  const [topic, setTopic] = useState("med_use");
-  const [theme, setTheme] = useState("flashcards");
+interface StartPageProps {
+  onStart: (topic: Topic, theme: Theme) => void;
+}
+
+export default function StartPage({ onStart }: StartPageProps) {
+  const [topic, setTopic] = useState<Topic>("med_use");
+  const [theme, setTheme] = useState<Theme>("flashcards");
 
   const handleStart = () => onStart(topic, theme);
 
@@ -41,7 +46,7 @@ export default function StartPage({ onStart }) {
             </label>
             <select
               value={topic}
-              onChange={(e) => setTopic(e.target.value)}
+              onChange={(e) => setTopic(e.target.value as Topic)}
               className="w-full bg-slate-800 border border-slate-700 text-white text-base rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
             >
               <option value="med_use">{TOPICS.med_use}</option>
@@ -55,7 +60,7 @@ export default function StartPage({ onStart }) {
             </label>
             <select
               value={theme}
-              onChange={(e) => setTheme(e.target.value)}
+              onChange={(e) => setTheme(e.target.value as Theme)}
               className="w-full bg-slate-800 border border-slate-700 text-white text-base rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
             >
               <option value="flashcards">{THEMES.flashcards}</option>

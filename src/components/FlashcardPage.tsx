@@ -1,7 +1,20 @@
 import { useEffect, useState } from "react";
 import { TOPICS } from "../data";
+import type { Card, Topic } from "../types";
 
-export default function FlashcardPage({ cards, topic, onBack, onFinish }) {
+interface FlashcardPageProps {
+  cards: Card[];
+  topic: Topic;
+  onBack: () => void;
+  onFinish: () => void;
+}
+
+export default function FlashcardPage({
+  cards,
+  topic,
+  onBack,
+  onFinish,
+}: FlashcardPageProps) {
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [playing, setPlaying] = useState(false);
